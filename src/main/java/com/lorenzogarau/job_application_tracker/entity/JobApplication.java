@@ -1,12 +1,12 @@
-package entity;
+package com.lorenzogarau.job_application_tracker.entity;
 
-import enums.ApplicationStatus;
+import com.lorenzogarau.job_application_tracker.enums.ApplicationStatus;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "applications")
+@Table(name = "job_applications")
 public class JobApplication {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,4 +1,4 @@
-package enums;
+package com.lorenzogarau.job_application_tracker.enums;
 
 public enum ApplicationStatus {
     DA_VALUTARE,
