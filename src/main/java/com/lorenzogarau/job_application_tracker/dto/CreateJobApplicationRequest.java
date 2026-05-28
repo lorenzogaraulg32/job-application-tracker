@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Getter
 @Setter
-public class JobApplicationDTO {
+public class CreateJobApplicationRequest {
 
     @NotBlank
     private String company;
@@ -24,7 +24,7 @@ public class JobApplicationDTO {
     private LocalDateTime applicationDate;
 
 
-    public JobApplicationDTO() {
+    public CreateJobApplicationRequest() {
     }
 
 
