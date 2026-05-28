@@ -16,4 +16,6 @@ public interface JobApplicationRepository extends JpaRepository<JobApplication, 
     List<JobApplication> findByCompanyContaining(String company);
 
     List<JobApplication> findByFollowUpDate(LocalDateTime followUpDate);
+
+
 }

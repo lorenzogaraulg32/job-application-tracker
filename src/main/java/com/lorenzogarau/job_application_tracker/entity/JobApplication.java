@@ -16,16 +16,17 @@ public class JobApplication {
     private String role;
     private String applicationUrl;
     private String location;
+    private String notes;
     private LocalDateTime applicationDate;
+
+    @Column(updatable = false)
+    private LocalDateTime createdAt;
+
+    private LocalDateTime updatedAt;
+    private LocalDateTime followUpDate;
 
     @Enumerated(EnumType.STRING)
     private ApplicationStatus status;
-
-    private String notes;
-    private LocalDateTime followUpDate;
-
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
 
 
     public JobApplication() {
@@ -36,6 +37,8 @@ public class JobApplication {
     protected void onCreate() {
         this.createdAt = LocalDateTime.now();
         this.updatedAt = LocalDateTime.now();
+        this.followUpDate = LocalDateTime.now().plusDays(8);
+        this.status = ApplicationStatus.CANDIDATURA_INVIATA;
     }
 
 
