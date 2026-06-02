@@ -10,17 +10,17 @@ import java.time.LocalDateTime;
 @Setter
 public class CreateJobApplicationRequest {
 
-    @NotBlank
+    @NotBlank(message = "company field must not be empty")
     private String company;
 
-    @NotBlank
+    @NotBlank(message = "role field must not be empty")
     private String role;
 
     private String applicationUrl;
     private String location;
     private String notes;
 
-    @PastOrPresent
+    @PastOrPresent(message = "applicationDate must be past or present")
     private LocalDateTime applicationDate;
 
 
