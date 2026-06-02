@@ -2,6 +2,7 @@ package com.lorenzogarau.job_application_tracker.controller;
 
 import com.lorenzogarau.job_application_tracker.dto.CreateJobApplicationRequest;
 import com.lorenzogarau.job_application_tracker.dto.JobApplicationResponse;
+import com.lorenzogarau.job_application_tracker.dto.PatchJobApplicationRequest;
 import com.lorenzogarau.job_application_tracker.dto.UpdateJobApplicationRequest;
 import com.lorenzogarau.job_application_tracker.service.JobApplicationService;
 import jakarta.validation.Valid;
@@ -40,12 +41,17 @@ public class JobApplicationController {
     }
 
     @PutMapping("/{id}")
-    JobApplicationResponse updateJobApplicationRequest(@Valid @PathVariable Long id, @RequestBody UpdateJobApplicationRequest dto) {
+    JobApplicationResponse updateJobApplicationRequest(@PathVariable Long id, @Valid @RequestBody UpdateJobApplicationRequest dto) {
         return jobApplicationService.updateApplication(id, dto);
     }
 
+    @PatchMapping("/{id}")
+    JobApplicationResponse patchJobApplicationRequest(@PathVariable long id, @Valid @RequestBody PatchJobApplicationRequest dto) {
+        return jobApplicationService.patchApplication(id, dto);
+    }
+
     @DeleteMapping("/{id}")
-    ResponseEntity<String> deleteJobApplicationrequest(@PathVariable long id) {
+    ResponseEntity<String> deleteJobApplicationRequest(@PathVariable long id) {
         return jobApplicationService.deleteApplication(id);
     }
 

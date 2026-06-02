@@ -2,6 +2,7 @@ package com.lorenzogarau.job_application_tracker.service;
 
 import com.lorenzogarau.job_application_tracker.dto.CreateJobApplicationRequest;
 import com.lorenzogarau.job_application_tracker.dto.JobApplicationResponse;
+import com.lorenzogarau.job_application_tracker.dto.PatchJobApplicationRequest;
 import com.lorenzogarau.job_application_tracker.dto.UpdateJobApplicationRequest;
 import com.lorenzogarau.job_application_tracker.entity.JobApplication;
 import com.lorenzogarau.job_application_tracker.exception.ResourceNotFoundException;
@@ -46,10 +47,19 @@ public class JobApplicationService {
     public JobApplicationResponse updateApplication(Long id, UpdateJobApplicationRequest dto) {
         JobApplication entity = jobApplicationRepository.findById(id).orElseThrow(
                 () -> new ResourceNotFoundException("Job Application con id: " + id + " non è stata trovata"));
-        jobApplicationMapper.updateEntity(dto, entity);
+        jobApplicationMapper.updateEntityForPut(dto, entity);
         JobApplication savedEntity = jobApplicationRepository.save(entity);
         return jobApplicationMapper.toResponse(savedEntity);
     }
+
+    public JobApplicationResponse patchApplication(Long id, PatchJobApplicationRequest dto) {
+        JobApplication entity = jobApplicationRepository.findById(id).orElseThrow(
+                () -> new ResourceNotFoundException("Job Application con id: " + id + " non è stata trovata"));
+        jobApplicationMapper.updateEntityForPatch(dto, entity);
+        JobApplication savedEntity = jobApplicationRepository.save(entity);
+        return jobApplicationMapper.toResponse(savedEntity);
+    }
+
 
     public ResponseEntity<String> deleteApplication(long id) {
         JobApplication entity = jobApplicationRepository.findById(id).orElseThrow(
