@@ -40,7 +40,7 @@ public class JobApplicationController {
     }
 
     @PutMapping("/{id}")
-    JobApplicationResponse updateJobApplicationRequest(@PathVariable Long id, @RequestBody UpdateJobApplicationRequest dto) {
+    JobApplicationResponse updateJobApplicationRequest(@Valid @PathVariable Long id, @RequestBody UpdateJobApplicationRequest dto) {
         return jobApplicationService.updateApplication(id, dto);
     }
 
