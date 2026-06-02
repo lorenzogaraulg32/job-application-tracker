@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.lorenzogarau</groupId>
-	<artifactId>job-application-tracker</artifactId>
+	<artifactId>job-application-tracker-backend-Spring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name/>
 	<description/>
