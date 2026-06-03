@@ -2,8 +2,8 @@
 
 ## BACKEND
 
-copy the file application-example.properties and rename it in application properties.
-Then modify username, password and database name
+copy the file "application-example.properties" and rename it in "application.properties". 
+then modify username, password and database name
 
 
 ## FRONTEND
