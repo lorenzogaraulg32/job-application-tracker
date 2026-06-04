@@ -12,9 +12,6 @@ Copy the example properties file:
 cp src/main/resources/application-example.properties src/main/resources/application.properties
 ```
 
-On Windows PowerShell, you can also copy it manually or use:
-
-
 
 Then edit `application.properties` and configure:
 
