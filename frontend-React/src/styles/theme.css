@@ -1,0 +1,29 @@
+:root {
+    --color-primary: #1f4df5;
+    --color-primary-dark: #163ac0;
+
+    --color-background: #f5f7fb;
+    --color-surface: #ffffff;
+    --color-surface-hover: #f8fbff;
+
+
+    --color-text-primary: #1f2937;
+    --color-text-secondary: #6b7280;
+
+    --color-border: #eef2f7;
+    --color-border-hover: #dbe3ef;
+
+    --color-border-strong: #cbd5e1;
+
+    --color-link: #1f4df5;
+
+    --font-size-sm: 0.875rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.5rem;
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+
+}

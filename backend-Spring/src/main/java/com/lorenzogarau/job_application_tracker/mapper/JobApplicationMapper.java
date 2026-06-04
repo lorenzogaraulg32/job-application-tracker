@@ -28,13 +28,17 @@ public class JobApplicationMapper {
 
     public JobApplicationResponse toResponse(JobApplication jobApplication) {
         JobApplicationResponse dto = new JobApplicationResponse();
+        dto.setId(jobApplication.getId());
         dto.setApplicationDate(jobApplication.getApplicationDate());
-        dto.setCompany(jobApplication.getCompany());
-        dto.setRole(jobApplication.getRole());
-        dto.setLocation(jobApplication.getLocation());
         dto.setApplicationUrl(jobApplication.getApplicationUrl());
+        dto.setCompany(jobApplication.getCompany());
+        dto.setCreatedAt(jobApplication.getCreatedAt());
+        dto.setFollowUp(jobApplication.getFollowUpDate());
+        dto.setLocation(jobApplication.getLocation());
         dto.setNotes(jobApplication.getNotes());
+        dto.setRole(jobApplication.getRole());
         dto.setStatus(jobApplication.getStatus());
+        dto.setUpdatedAt(jobApplication.getUpdatedAt());
         return dto;
     }
 

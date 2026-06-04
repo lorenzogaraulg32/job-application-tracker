@@ -11,11 +11,16 @@ import java.time.LocalDateTime;
 @Setter
 public class JobApplicationResponse {
 
-    private String company;
-    private String role;
+    private Long id;
+    private LocalDateTime applicationDate;
     private String applicationUrl;
+    private String company;
+    private LocalDateTime createdAt;
+    private LocalDateTime followUp;
     private String location;
     private String notes;
+    private String role;
     private ApplicationStatus status;
-    private LocalDateTime applicationDate;
+    private LocalDateTime updatedAt;
+
 }
