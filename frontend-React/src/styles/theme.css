@@ -2,18 +2,34 @@
     --color-primary: #1f4df5;
     --color-primary-dark: #163ac0;
 
-    --color-background: #f5f7fb;
-    --color-surface: #ffffff;
-    --color-surface-hover: #f8fbff;
+
+    --color-app-background: linear-gradient(
+            135deg,
+            #e8f1ff 0%,
+            #f8fafc 45%,
+            #eef7ff 100%
+    );
 
 
+
+    /* header*/
+    --color-header-text: #1e3a8a ;
+    --color-table-header: #1e40af;
+    --color-table-header-text: #ffffff;
+    --color-table-header-border: #579bff;
+
+    --header-height: 60px;
+    --color-header-background: linear-gradient(
+            120deg,
+            #cfe2fc 0%,
+            #f8fafc 45%,
+            #e0f2fe 100%
+    );
+
+
+    /* text */
     --color-text-primary: #1f2937;
     --color-text-secondary: #6b7280;
-
-    --color-border: #eef2f7;
-    --color-border-hover: #dbe3ef;
-
-    --color-border-strong: #cbd5e1;
 
     --color-link: #1f4df5;
 
@@ -25,5 +41,26 @@
     --font-weight-medium: 500;
     --font-weight-bold: 700;
 
+    /* job applications list*/
+    --color-surface-hover-card: #f8fbff;
+    --color-surface-card: #ffffff;
+    --color-border-strong-card: #cbd5e1;
+    --color-border-hover-card: #dbe3ef;
+    --color-border-card: #f1f4f6;
+    --color-border-header-list: #d5dbe3;
+    --color-background-list: #f5f7fb;
+
+    /* scrollbar */
+    --application-scrollbar-width: 15px;
+
+
+    /* Sidebar */
+    --sidebar-collapsed-width: 70px;
+    --sidebar-expanded-width: 240px;
+    --color-sidebar-start: #0f172a;
+    --color-sidebar-end: #172554;
+
+    --color-sidebar-hover: rgba(59, 130, 246, 0.16);
+    --color-sidebar-active: #2563eb;
 
 }

@@ -1,0 +1,36 @@
+.applicationHeader {
+    display: grid;
+    grid-template-columns: 1.35fr 0.95fr 1.45fr 1fr 1fr 2.35fr 0.75fr 0.75fr 0.75fr;
+    background-color: var(--color-table-header);
+    border-radius: 18px 18px 0 0;
+    padding-left: 14px;
+    padding-right: var(--application-scrollbar-width);
+    border: solid var(--color-border-strong-card) 1px;
+}
+
+.applicationHeader > * {
+    margin: 0;
+    padding: 15px;
+
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-table-header-text);
+
+    border-right: 1px solid var(--color-border-header-list);
+
+    display: flex;
+    align-items: center;
+}
+
+
+.applicationHeader > *:last-child {
+    border-right: none;
+}
+
+.applicationHeader > *:nth-child(7),
+.applicationHeader > *:nth-child(8),
+.applicationHeader > *:nth-child(9) {
+    justify-content: center;
+    text-align: center;
+    font-size: 0.800rem;
+}

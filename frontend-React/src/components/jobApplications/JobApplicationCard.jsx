@@ -1,4 +1,4 @@
-import "../../styles/jobApplications/applications.css";
+import "../../styles/jobApplications/jobApplicationList.css";
 
 
 export function JobApplicationCard({application}) {
@@ -29,14 +29,20 @@ export function JobApplicationCard({application}) {
         <div className={"applicationCard"}>
             <p>{company}</p>
             <a href={url}>Apri candidatura →</a>
-            <p>{role}</p>
+            <p className="applicationCard-role">
+                <span>
+                    {role}
+                </span>
+            </p>
             <p>{location}</p>
             <p className="applicationCard-status">
                 <span className={statusClass}>
                     {formatStatus(status)}
                 </span>
             </p>
-            <p>{notes}</p>
+            <p className="applicationCard-notes">
+                <span>{notes}</span>
+            </p>
             <p>{formatDate(applicationDate)}</p>
             <p>{formatDate(followUp)}</p>
             <p>{formatDate(updatedAt)}</p>
@@ -46,6 +52,7 @@ export function JobApplicationCard({application}) {
 }
 
 function formatDate(date) {
+    if (date === null) return " ";
     const parts = date.split("T");
 
     let days = parts[0].split("-")
@@ -59,7 +66,12 @@ function formatDate(date) {
 }
 
 function formatStatus(status) {
-    let s = status.replace("_", " ").toLowerCase();
-    return s.charAt(0).toUpperCase() + s.slice(1);
+    if (status != null) {
+
+        let s = status.replace("_", " ").toLowerCase();
+        return s.charAt(0).toUpperCase() + s.slice(1);
+    } else {
+        return " "
+    }
 }
 

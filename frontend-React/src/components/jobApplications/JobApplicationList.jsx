@@ -1,7 +1,9 @@
 import {useEffect, useState} from "react";
 import {getAllApplications} from "../../api/jobApplicationApi.js";
 import {JobApplicationCard} from "./JobApplicationCard.jsx";
-import "../../styles/jobApplications/applications.css";
+import "../../styles/jobApplications/jobApplicationList.css";
+import "../../styles/jobApplications/jobApplicationCard.css";
+import {JobApplicationHeader} from "./JobApplicationHeader.jsx";
 
 export function JobApplicationList() {
 
@@ -54,9 +56,15 @@ export function JobApplicationList() {
 
 
     return (
-        <div className={"applicationList"}>
-            {content}
-        </div>
+
+
+            <div className={"listContainer"}>
+                <JobApplicationHeader/>
+                <div className={"applicationList"}>
+                    {content}
+                </div>
+            </div>
+
     )
 
 }
