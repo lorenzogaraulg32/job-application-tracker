@@ -8,7 +8,6 @@
     align-items: center;
     justify-content: left;
     gap: 12px;
-    background-color: var(--color-app-background);
 }
 
 .app-header-title {

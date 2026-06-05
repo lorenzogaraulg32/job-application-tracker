@@ -19,13 +19,6 @@
     --color-table-header-border: #579bff;
 
     --header-height: 60px;
-    --color-header-background: linear-gradient(
-            120deg,
-            #cfe2fc 0%,
-            #f8fafc 45%,
-            #e0f2fe 100%
-    );
-
 
     /* text */
     --color-text-primary: #1f2937;
