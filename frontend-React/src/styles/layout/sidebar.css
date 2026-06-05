@@ -1,0 +1,116 @@
+.sidebar {
+    width: var(--sidebar-collapsed-width);
+    flex-shrink: 0;
+    height: 100vh;
+
+    background: linear-gradient(
+            360deg,
+            var(--color-sidebar-start),
+            var(--color-sidebar-end)
+    );
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 20px;
+
+    transition: width 0.2s ease;
+}
+
+.sidebar--open {
+    width: var(--sidebar-expanded-width);
+    align-items: flex-start;
+
+}
+
+
+.sidebar--open .sidebar-menu-button {
+    margin-left: 20px;
+}
+
+
+.sidebar--open .sidebarButtons {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.sidebarButtons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    opacity: 0;
+    transform: translateX(-12px);
+    pointer-events: none;
+
+    transition: opacity 0.10s ease, transform 0.15s ease;
+
+}
+
+.sidebarButton {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    font-size: var(--font-size-md);
+    color: white;
+    padding: 18px 30px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sidebarButton:hover {
+    background-color: var(--color-sidebar-hover);
+    cursor: pointer;
+}
+
+.sidebarButton--active {
+    background-color: var(--color-sidebar-hover);
+    cursor: pointer;
+}
+
+.sidebarButtons > *:first-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    margin-top: 20px;
+}
+
+
+.sidebar-menu-button {
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 12px;
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.sidebar-menu-button span {
+    width: 28px;
+    height: 3px;
+
+    border-radius: 999px;
+    background-color: #e5e7eb;
+
+    transition: background-color 0.15s ease;
+}
+
+.sidebar-menu-button:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    transform: translateY(-1px);
+}
+
+.sidebar-menu-button:hover span {
+    background-color: #ffffff;
+}

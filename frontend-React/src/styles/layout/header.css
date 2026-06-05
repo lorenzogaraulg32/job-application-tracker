@@ -1,22 +1,25 @@
 .app-header {
     width: 100%;
-    padding: 10px 30px;
+    height: var(--header-height);
+    padding: 35px 10px 10px 20px;
     margin: 0;
-    background-color: var(--color-primary-dark);
+
     display: flex;
     align-items: center;
+    justify-content: left;
     gap: 12px;
+    background-color: var(--color-app-background);
 }
 
 .app-header-title {
-    color: white;
+    color: var(--color-header-text);
     font-family: SansSerif, sans-serif;
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-bold);
 }
 
 .app-header-icon {
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
     object-fit: fill;
 }
