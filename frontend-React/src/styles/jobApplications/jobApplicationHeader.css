@@ -3,8 +3,8 @@
     grid-template-columns: 1.35fr 0.95fr 1.45fr 1fr 1fr 2.35fr 0.75fr 0.75fr 0.75fr;
     background-color: var(--color-table-header);
     border-radius: 18px 18px 0 0;
-    padding-left: 14px;
-    padding-right: var(--application-scrollbar-width);
+    padding-left: 13px;
+    padding-right: calc(var(--application-scrollbar-width) + 3px);
     border: solid var(--color-border-strong-card) 1px;
 }
 

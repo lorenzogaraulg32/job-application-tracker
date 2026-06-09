@@ -17,7 +17,7 @@ cp src/main/resources/application-example.properties src/main/resources/applicat
 Then edit `application.properties` and configure:
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/YOUR_DATABASE_NAME
+spring.datasource.url=YOUR_DB_URL/YOUR_DATABASE_NAME
 spring.datasource.username=YOUR_USERNAME
 spring.datasource.password=YOUR_PASSWORD
 app.cors.allowed-origin=YOUR_FRONTEND_URL
