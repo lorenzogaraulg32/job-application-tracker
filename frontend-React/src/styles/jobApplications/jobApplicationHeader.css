@@ -8,6 +8,12 @@
     border: solid var(--color-border-strong-card) 1px;
 }
 
+@-moz-document url-prefix() {
+    .applicationHeader {
+        padding-right: calc(var(--application-scrollbar-width));
+    }
+}
+
 .applicationHeader > * {
     margin: 0;
     padding: 15px;
