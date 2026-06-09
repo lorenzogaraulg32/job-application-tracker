@@ -1,6 +1,7 @@
 # Job Application Tracker
 
 Minimal setup instructions for running the project locally.
+Maven and Vite are required for the project to work
 
 ## Backend setup
 
